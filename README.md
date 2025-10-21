@@ -168,4 +168,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 🐛 Issues
 
-Found a bug? Please [open an issue](https://github.com/yourusername/ng-indexed-signal/issues).
+Found a bug? Please [open an issue]([https://github.com/yourusername/ng-indexed-signal/issues](https://github.com/eviatarmor/ngIndexedSignal/issues/new)).
