@@ -1,6 +1,5 @@
 # ngIndexedSignal
 
-[![npm version](https://badge.fury.io/js/ng-indexed-signal.svg)](https://badge.fury.io/js/ng-indexed-signal)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A lightweight Angular library that provides persistent, cross-tab synchronized signals using IndexedDB and BroadcastChannel APIs.
@@ -12,18 +11,7 @@ A lightweight Angular library that provides persistent, cross-tab synchronized s
 - ⚡ **Zero configuration** - Works out of the box with sensible defaults
 - 🪝 **Angular integration** - Leverages Angular's dependency injection and lifecycle hooks
 - 🧹 **Automatic cleanup** - Resources are properly cleaned up when components are destroyed
-- 📦 **Lightweight** - Minimal bundle size impact
-
-## 📦 Installation
-```bash
-npm install ng-indexed-signal
-```
-
-or
-```bash
-yarn add ng-indexed-signal
-```
-
+- 
 ## 🚀 Quick Start
 ```typescript
 import { Component } from '@angular/core';
