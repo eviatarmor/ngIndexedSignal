@@ -130,7 +130,7 @@ Requires browsers that support:
 ## 🛠️ Installation
 ```bash
 # Install dependencies
-npm install @eviatarmor/indexed-signal@1.0.0
+npm i @eviatarmor/indexed-signal
 ```
 
 ## 📄 Licence
