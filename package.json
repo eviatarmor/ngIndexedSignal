@@ -1,6 +1,6 @@
 {
     "name": "@eviatarmor/indexed-signal",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A writable Angular signal that persists to IndexedDB and synchronises across browser tabs",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
