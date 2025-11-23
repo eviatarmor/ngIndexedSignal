@@ -1,3 +1,27 @@
+/**
+ * MIT License
+ *
+ * Copyright (c) 2025 Eviatar
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
 import {computed, CreateSignalOptions, DestroyRef, inject, signal, WritableSignal} from '@angular/core';
 import {fromEvent, Subject, takeUntil} from 'rxjs';
 
@@ -14,7 +38,7 @@ export interface CreateIndexedSignalOptions<T> extends CreateSignalOptions<T> {
 }
 
 /**
- * A writable signal that persists to IndexedDB and synchronizes across browser tabs
+ * A writable signal that persists to IndexedDB and synchronises across browser tabs
  */
 export interface IndexedWritableSignal<T> extends WritableSignal<T> {
   /**
@@ -25,7 +49,7 @@ export interface IndexedWritableSignal<T> extends WritableSignal<T> {
 
 /**
  * Service for managing IndexedDB operations
- * Handles database connection, initialization, and CRUD operations
+ * Handles database connection, initialisation, and CRUD operations
  */
 class IndexedDBService {
   private db: IDBDatabase | null = null;
@@ -133,24 +157,11 @@ class IndexedDBService {
 }
 
 /**
- * Creates a writable signal that automatically persists to IndexedDB and synchronizes across browser tabs
+ * Creates a writable signal that automatically persists to IndexedDB and synchronises across browser tabs
  * 
  * @param initialValue The initial value to use if no stored value exists
  * @param options Configuration options including the required unique key
  * @returns An IndexedWritableSignal that can be used like a regular Angular signal
- * 
- * @example
- * ```typescript
- * const counter = indexedSignal(0, { key: 'my-counter' });
- * 
- * // Use like a regular signal
- * console.log(counter()); // Read value
- * counter.set(5); // Set value (persists and syncs)
- * counter.update(n => n + 1); // Update value (persists and syncs)
- * 
- * // Wait for initialization if needed
- * await counter.waitUntilReady();
- * ```
  */
 export function indexedSignal<T>(initialValue: T, options: CreateIndexedSignalOptions<T>): IndexedWritableSignal<T> {
   // Inject Angular's DestroyRef for automatic cleanup
@@ -168,9 +179,9 @@ export function indexedSignal<T>(initialValue: T, options: CreateIndexedSignalOp
 
   // Create the internal Angular signal
   const internalSignal = signal<T>(initialValue, options);
-  let isInitialized = false;
+  let isInitialised = false;
 
-  // Initialize signal with stored value from IndexedDB
+  // Initialise signal with stored value from IndexedDB
   // This promise resolves once the initial load is complete
   const initPromise = new Promise<void>(async (resolve) => {
     try {
@@ -181,7 +192,7 @@ export function indexedSignal<T>(initialValue: T, options: CreateIndexedSignalOp
     } catch (e) {
       console.error('Failed to load initial data from IndexedDB:', e);
     } finally {
-      isInitialized = true;
+      isInitialised = true;
       resolve();
     }
   });
