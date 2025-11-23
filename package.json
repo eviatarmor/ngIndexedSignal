@@ -1,0 +1,44 @@
+{
+    "name": "@eviatarmor/indexed-signal",
+    "version": "1.0.0",
+    "description": "A writable Angular signal that persists to IndexedDB and synchronises across browser tabs",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist",
+        "README.md",
+        "LICENSE"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "prepublishOnly": "npm run build"
+    },
+    "keywords": [
+        "angular",
+        "signal",
+        "indexeddb",
+        "persistence",
+        "synchronization",
+        "cross-tab",
+        "state-management"
+    ],
+    "author": "Eviatar",
+    "license": "MIT",
+    "peerDependencies": {
+        "@angular/core": ">=17.0.0",
+        "rxjs": ">=7.0.0"
+    },
+    "devDependencies": {
+        "@angular/core": "^17.0.0",
+        "rxjs": "^7.0.0",
+        "typescript": "^5.2.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/eviatarmor/ngIndexedSignal.git"
+    },
+    "bugs": {
+        "url": "https://github.com/eviatarmor/ngIndexedSignal/issues"
+    },
+    "homepage": "https://github.com/eviatarmor/ngIndexedSignal#readme"
+}
