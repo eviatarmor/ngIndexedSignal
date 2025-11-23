@@ -127,16 +127,10 @@ Requires browsers that support:
 - The `BroadcastChannel` only sends messages to **other** tabs, not back to itself
 - Cleanup is automatic when the injection context is destroyed (using RxJS)
 
-## 🛠️ Development
+## 🛠️ Installation
 ```bash
 # Install dependencies
-npm install
-
-# Run tests
-npm test
-
-# Build
-npm run build
+npm install @eviatarmor/indexed-signal
 ```
 
 ## 📄 Licence
